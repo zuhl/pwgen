@@ -53,7 +53,7 @@ SECOND_WORD=$(head -n`jot -r 1 1 $NUM` /usr/share/dict/words | awk 'length < 6' 
 RAND_NUM=$(jot -r 1 1 99);
 
 # setup our characters
-CHARS=( '!' '@' '#' '$' '%' '^' '&' '*' '-' '_' '=' '+' ']' '[' '}' '{' ':' ';' '"' '.' ',' '<' '>' '?' );
+CHARS=( '!' '@' '#' '$' '%' '^' '&' '*' '-' '_' '=' '+' ']' '[' '}' '{' ':' '"' '.' ',' '<' '>' '?' );
 
 # get a random character
 CHAR_RAND=${CHARS[$(jot -r 1 1 ${#CHARS[*]})]};
