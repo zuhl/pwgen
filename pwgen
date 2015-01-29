@@ -58,7 +58,7 @@ CHARS=( '!' '@' '#' '$' '%' '^' '&' '*' '-' '_' '=' '+' ']' '[' '}' '{' ':' '"' 
 # get a random character
 CHAR_RAND=${CHARS[$(jot -r 1 1 ${#CHARS[*]})]};
 
-# write the generated password to the clipboard
+# write the generated password to the clipboard, 'tr -d '\n' nukes the rogue newline character that comes along for the ride before you do the 'pbcopy'
 echo $FIRST_WORD$RAND_NUM$CHAR_RAND$SECOND_WORD | tr -d '\n' | pbcopy;
 
 # write the generated password to the screen
