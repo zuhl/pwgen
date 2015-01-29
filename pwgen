@@ -1,5 +1,5 @@
 #!/bin/sh 
-VERSION_NUMBER=0.1.0
+VERSION_NUMBER=0.1.1
 
 usage() {
 cat << EOF
