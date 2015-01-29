@@ -59,7 +59,7 @@ CHARS=( '!' '@' '#' '$' '%' '^' '&' '*' '-' '_' '=' '+' ']' '[' '}' '{' ':' '"' 
 CHAR_RAND=${CHARS[$(jot -r 1 1 ${#CHARS[*]})]};
 
 # write the generated password to the clipboard
-echo $FIRST_WORD$RAND_NUM$CHAR_RAND$SECOND_WORD | pbcopy;
+echo $FIRST_WORD$RAND_NUM$CHAR_RAND$SECOND_WORD | tr -d '\n' | pbcopy;
 
 # write the generated password to the screen
 EXPLETIVE=("Bam" "Giggity" "Woot" "Ha cha cha" "Word" "Boo Ya" "Holla" "Hooray" "Hurrah" "Huzzah" "Giddyup" "Yee haw" "Woo hoo" "Falafel" "Yes" "Hip-hip" "Whoopee" "Yippee")
